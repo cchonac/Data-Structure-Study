@@ -1,4 +1,4 @@
-/*#include<iostream>
+#include<iostream>
 using namespace std;
 
 class Node {
@@ -7,16 +7,16 @@ public:
 	Node* next;
 
 };
-void printList(Node* head) {//³ëµå°¡ °®°íÀÖ´Â µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇØÁÖ´Â ÇÔ¼ö 
-	Node* cursor = new Node(); //cursor ¶ó´Â ³ëµå¸¦ µ¿ÀûÇÒ´çÀ¸·Î »ı¼º 
+void printList(Node* head) {//ë…¸ë“œê°€ ê°–ê³ ìˆëŠ” ë°ì´í„°ë¥¼ ì¶œë ¥í•´ì£¼ëŠ” í•¨ìˆ˜ 
+	Node* cursor = new Node(); //cursor ë¼ëŠ” ë…¸ë“œë¥¼ ë™ì í• ë‹¹ìœ¼ë¡œ ìƒì„± 
 	if (head == NULL) {
 		cout << "The head is NULL";
 	}
 	else {
-		cursor = head->next;// Ä¿¼­¿¡ next¸¦ ÇÒ´ç 
+		cursor = head->next;// ì»¤ì„œì— nextë¥¼ í• ë‹¹ 
 		while (cursor != NULL) {
 			cout << cursor->data << " ";
-			cursor = cursor->next;// next°¡ °¡¸®Å°´Â°É Ä¿¼­°¡ °¡¸®Å°µµ·Ï Áï, ´ÙÀ½ ³ëµå
+			cursor = cursor->next;// nextê°€ ê°€ë¦¬í‚¤ëŠ”ê±¸ ì»¤ì„œê°€ ê°€ë¦¬í‚¤ë„ë¡ ì¦‰, ë‹¤ìŒ ë…¸ë“œ
 		}
 	}
 }
@@ -27,8 +27,8 @@ Node* insert(Node* head, int new_data) {
 	}
 	Node* new_node = new Node();
 	new_node->data = new_data;
-	new_node->next = head->next; //¿ø·¡ head°¡ °¡¸®Å°´ø°É »õ·Î »ğÀÔµÈ ¾Ö°¡ °¡¸®Å°°í
-	head->next = new_node;//±âÁ¸ head´Â »õ·Î »ğÀÎµÈ ³ëµå¸¦ °¡¸®Å°µµ·Ï
+	new_node->next = head->next; //ì›ë˜ headê°€ ê°€ë¦¬í‚¤ë˜ê±¸ ìƒˆë¡œ ì‚½ì…ëœ ì• ê°€ ê°€ë¦¬í‚¤ê³ 
+	head->next = new_node;//ê¸°ì¡´ headëŠ” ìƒˆë¡œ ì‚½ì¸ëœ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ë„ë¡
 
 }
 Node* deleteNode(Node* head, int key) {
@@ -36,22 +36,22 @@ Node* deleteNode(Node* head, int key) {
 		cout << "The head is NULL";
 		return head;
 	}
-	Node* cursor = new Node(); //Ä¿¼­¶ó´Â Æ÷ÀÎÅÍ µ¿ÀûÇÒ´ç 
-	cursor = head; //Çìµå°¡ °¡¸®Å°´Â°É ³ëµåµµ °¡¸®Å°µµ·Ï
-	while (cursor->next->data != key) {// Ä¿¼­ ´ÙÀ½³ëµåÀÇ data°¡ key¶û ´Ù¸£¸é 
-		cursor = cursor->next; //»èÁ¦ÇÏ·Á´Â °ª¿¡ µµ´ŞÇÒ¶§ ±îÁö ³Ñ¾î°¨ 
+	Node* cursor = new Node(); //ì»¤ì„œë¼ëŠ” í¬ì¸í„° ë™ì í• ë‹¹ 
+	cursor = head; //í—¤ë“œê°€ ê°€ë¦¬í‚¤ëŠ”ê±¸ ë…¸ë“œë„ ê°€ë¦¬í‚¤ë„ë¡
+	while (cursor->next->data != key) {// ì»¤ì„œ ë‹¤ìŒë…¸ë“œì˜ dataê°€ keyë‘ ë‹¤ë¥´ë©´ 
+		cursor = cursor->next; //ì‚­ì œí•˜ë ¤ëŠ” ê°’ì— ë„ë‹¬í• ë•Œ ê¹Œì§€ ë„˜ì–´ê° 
 	}
 	Node* temp = new Node();
-	temp = cursor->next; //temp°¡ Ä¿¼­ÀÇ ´ÙÀ½ ³ëµå¸¦ °¡¸®Å°µµ·Ï,tempº¸°í »èÁ¦µÉ ±× ³ëµå¸¦ °¡¸®Å°µµ·Ï ÇÏ°í 
-	cursor->next = cursor->next->next;// Ä¿¼­´Â ÀÚ±â°¡ °¡¸®Å°°í ÀÖ´Â ³ëµåÀÇ ´ÙÀ½ ³ëµå¸¦ °¡¸®ÄÚµµ·Ï 
+	temp = cursor->next; //tempê°€ ì»¤ì„œì˜ ë‹¤ìŒ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ë„ë¡,tempë³´ê³  ì‚­ì œë  ê·¸ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ë„ë¡ í•˜ê³  
+	cursor->next = cursor->next->next;// ì»¤ì„œëŠ” ìê¸°ê°€ ê°€ë¦¬í‚¤ê³  ìˆëŠ” ë…¸ë“œì˜ ë‹¤ìŒ ë…¸ë“œë¥¼ ê°€ë¦¬ì½”ë„ë¡ 
 	delete temp;
 	return head;
-}*/
-/*int main() {
+}
+int main() {
 	Node* head = new Node();
 	head = insert(head, 1);
 	head = insert(head, 2); 
-	head = insert(head, 3); //¸Ç ¾ÕÀÌ 3
+	head = insert(head, 3); //ë§¨ ì•ì´ 3
 	printList(head);
 	cout << endl;
 	head = deleteNode(head, 1);
@@ -59,4 +59,4 @@ Node* deleteNode(Node* head, int key) {
 	cout << endl;
 	return 0;
 
-}*/
+}
