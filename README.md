@@ -25,5 +25,7 @@ array를 class를 이용하여 구현하였다.
 
 <br/><br/>
 ## 3주차 Stack
-###[Stack 구현.
+###[Stack 구현.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/array%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20stack%20%EA%B5%AC%ED%98%84.cpp)
+array를 이용해서 stack을 구현한 코드이다.
+###[BOJ 10828-스택]
 
