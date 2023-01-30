@@ -45,7 +45,8 @@ Node* deleteNode(Node* head, int key) {
 	temp = cursor->next; //temp가 커서의 다음 노드를 가리키도록,temp보고 삭제될 그 노드를 가리키도록 하고 
 	cursor->next = cursor->next->next;// 커서는 자기가 가리키고 있는 노드의 다음 노드를 가리코도록 
 	delete temp;
-	return head;
+	return head;//기존 노드를 그대로 반환하되, 삭제가 필요한 부분은 삭제해서 반환
+	
 }
 int main() {
 	Node* head = new Node();
