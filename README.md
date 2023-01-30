@@ -13,3 +13,4 @@
 
 ---
 ## 1주차 Array
+[코드](https://github.com/cchonac/Data-Structure-Study/blob/main/Array%20%EA%B5%AC%ED%98%84.cpp)
