@@ -27,6 +27,7 @@ array를 class를 이용하여 구현하였다.
 ## 3주차 Stack
 ### [Stack 구현.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/array%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20stack%20%EA%B5%AC%ED%98%84.cpp)
 array를 이용해서 stack을 구현한 코드이다.
-### 문제: [10828 스택 (실버4)](https://www.acmicpc.net/problem/10828) [BOJ 10828-스택 코드.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/BOJ%2010828%EB%B2%88-%EC%8A%A4%ED%83%9D.cpp)
-스택class를 짜는 기본적이면서 핵심적인 문제이다.
+### 문제: [10828 스택 (실버4)](https://www.acmicpc.net/problem/10828)
+### [BOJ 10828-스택 코드.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/BOJ%2010828%EB%B2%88-%EC%8A%A4%ED%83%9D.cpp)
+
 
