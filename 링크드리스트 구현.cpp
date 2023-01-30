@@ -19,7 +19,7 @@ void printList(Node* head) {//노드가 갖고있는 데이터를 출력해주�
 			cursor = cursor->next;// next가 가리키는걸 커서가 가리키도록 즉, 다음 노드
 		}
 	}
-}
+}//***새로운 노드가 헤드 바로앞에 삽입된다. new_node를 할당했고 얘가 삽입될 애다.  
 Node* insert(Node* head, int new_data) {
 	if (head == NULL) {
 		cout << "The head is NULL";
@@ -31,7 +31,9 @@ Node* insert(Node* head, int new_data) {
 	head->next = new_node;//기존 head는 새로 삽인된 노드를 가리키도록
 
 }
-Node* deleteNode(Node* head, int key) {
+//***노드 커서를 만들어서 하나 하나 움직여 가면서 삭제할 노드를 찾는다. 
+//***커서가 삭제할 노드를 찾으면 커서의 next가 다음 한번 더 다음 노드를 가리킨다. 그리고 임시 노드 포인터를 만들어서 삭제할 노드를 가리키게 만들고 해제시켜 버린다. 
+Node* deleteNode(Node* head, int key) { 
 	if (head == NULL) {
 		cout << "The head is NULL";
 		return head;
