@@ -1,8 +1,8 @@
-/*#include<iostream>
+#include<iostream>
 #include<cstdlib>
 using namespace std;
 
-#define SIZE 10 //½ºÅÃÀÇ ±âº»¿ë·® Á¤ÀÇ 
+#define SIZE 10 //ìŠ¤íƒì˜ ê¸°ë³¸ìš©ëŸ‰ ì •ì˜ 
 
 class Stack {
 private:
@@ -11,8 +11,8 @@ private:
 	int capacity;
 
 public:
-	Stack(int size = SIZE); //»ı¼ºÀÚ
-	~Stack();//¼Ò¸êÀÚ
+	Stack(int size = SIZE); //ìƒì„±ì
+	~Stack();//ì†Œë©¸ì
 
 	void push(int);
 	int pop();
@@ -23,10 +23,10 @@ public:
 	bool isFull();
 
 };
-Stack::Stack(int size) { //Stack ÃÊ±âÈ­¸¦ À§ÇÑ »ı¼ºÀÚ
+Stack::Stack(int size) { //Stack ì´ˆê¸°í™”ë¥¼ ìœ„í•œ ìƒì„±ì
 	arr = new int[size];
 	capacity = size;
-	top = -1; //°ø¹é»óÅÂ ÀÏ¶© topÀÇ ÀÎµ¦½º´Â -1
+	top = -1; //ê³µë°±ìƒíƒœ ì¼ë• topì˜ ì¸ë±ìŠ¤ëŠ” -1
 }
 Stack::~Stack() {
 	delete[] arr;
@@ -48,10 +48,10 @@ int Stack::pop() {
 	}
 	cout << "Removing" << peek() << endl;
 
-	return arr[top--]; //stack Å©±â¸¦ 1¸¸Å­ ÁÙÀÌ°í popµÈ ¿ä¼Ò¸¦ ¹İÈ¯ÇÑ´Ù.
+	return arr[top--]; //stack í¬ê¸°ë¥¼ 1ë§Œí¼ ì¤„ì´ê³  popëœ ìš”ì†Œë¥¼ ë°˜í™˜í•œë‹¤.
 }
 
-int Stack::peek() { //stackÀÇ ÃÖ»óÀ§ ¿ä¼Ò¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö
+int Stack::peek() { //stackì˜ ìµœìƒìœ„ ìš”ì†Œë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜
 	if (!isEmpty()) {
 		return arr[top];
 	}
@@ -65,7 +65,7 @@ int Stack::size() {
 }
 
 bool Stack::isEmpty() {
-	return top == -1; //topÀÌ -1ÀÌ¸é ºñ¾îÀÖ´Ù´Â ¶æÀÌ´Ï±î
+	return top == -1; //topì´ -1ì´ë©´ ë¹„ì–´ìˆë‹¤ëŠ” ëœ»ì´ë‹ˆê¹Œ
 }
 
 bool Stack::isFull() {
@@ -87,4 +87,3 @@ int main() {
 	else cout << "fasle" << endl;
 
 }
-*/
