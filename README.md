@@ -10,3 +10,6 @@
 |2|[Linked List]
 |3|[Stack]|BOJ_10828|
 |4|[Queue]
+
+---
+## 1주차 Array
