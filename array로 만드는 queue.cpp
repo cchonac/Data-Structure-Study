@@ -1,15 +1,15 @@
 #include<iostream>
 #include<cstdlib>
 using namespace std;
-//QueueÀÇ ±âº» ¿ë·® Á¤ÀÇ
+//Queueì˜ ê¸°ë³¸ ìš©ëŸ‰ ì •ì˜
 #define SIZE 1000
 
 class Queue {
-	int *arr; //queueÀÇ ¿ä¼Ò¸¦ ÀúÀåÇÒ array
-	int capacity; //queueÀÇ ÃÖ´ë ¿ë·®
-	int front; //¸Ç ¾Õ ¿ä¼Ò
-	int rear; //¸¶Áö¸· ¿ä¼Ò 
-	int count; //queueÀÇ ÇöÀçÅ©±â
+	int *arr; //queueì˜ ìš”ì†Œë¥¼ ì €ì¥í•  array
+	int capacity; //queueì˜ ìµœëŒ€ ìš©ëŸ‰
+	int front; //ë§¨ ì• ìš”ì†Œ
+	int rear; //ë§ˆì§€ë§‰ ìš”ì†Œ 
+	int count; //queueì˜ í˜„ì¬í¬ê¸°
 
 public:
 	Queue(int size = SIZE);
@@ -17,8 +17,8 @@ public:
 
 	int dequeue();
 	void enqueue(int x);
-	int peek(); //queue¿¡¼­ »©Áö¾Ê°í Å¥¿¡ ÀÖ´Â Àü¸é¿ä¼Ò¸¦ ¹İÈ¯ÇÕ´Ï´Ù.
-	int size(); //Å¥¿¡ ÀÖ´Â ¿ä¼ÒÀÇ ÃÑ¼ö¸¦ ¹İÈ¯ÇÕ´Ï´Ù.
+	int peek(); //queueì—ì„œ ë¹¼ì§€ì•Šê³  íì— ìˆëŠ” ì „ë©´ìš”ì†Œë¥¼ ë°˜í™˜í•©ë‹ˆë‹¤.
+	int size(); //íì— ìˆëŠ” ìš”ì†Œì˜ ì´ìˆ˜ë¥¼ ë°˜í™˜í•©ë‹ˆë‹¤.
 	bool isEmpty();
 	bool isFull();
 };
@@ -34,7 +34,7 @@ Queue::~Queue() {
 	delete[]arr;
 
 }
-//Å¥°¡ ¿ä¼Ò¸¦ »©³»°ÔµÇ¸é µÚ¿¡ ÀÖ´ø µ¥ÀÌÅÍµéÀÌ ÇÑÄ­¾¿ ¾ÕÀ¸·Î ´ç°Ü¿Â´Ù
+//íê°€ ìš”ì†Œë¥¼ ë¹¼ë‚´ê²Œë˜ë©´ ë’¤ì— ìˆë˜ ë°ì´í„°ë“¤ì´ í•œì¹¸ì”© ì•ìœ¼ë¡œ ë‹¹ê²¨ì˜¨ë‹¤
 int Queue::dequeue() {
 	if (isEmpty()) {
 		cout << "underflow.\n";
@@ -42,8 +42,8 @@ int Queue::dequeue() {
 	}
 	int x = arr[front];
 	cout << "Removing " << x << endl;
-	front = (front + 1) % capacity;//Ã³À½ ³ª°¡´Â°Ç 0¹øÂ° ÀÎµ¦½º, ±×´ÙÀ½³ª°¡´Â°Ç 1¹øÂ° ÀÎµ¦½º
-	count--;//Å¥ ½ÇÁ¦Å©±â 1¸¸Å­ °¨¼Ò
+	front = (front + 1) % capacity;//ì²˜ìŒ ë‚˜ê°€ëŠ”ê±´ 0ë²ˆì§¸ ì¸ë±ìŠ¤, ê·¸ë‹¤ìŒë‚˜ê°€ëŠ”ê±´ 1ë²ˆì§¸ ì¸ë±ìŠ¤
+	count--;//í ì‹¤ì œí¬ê¸° 1ë§Œí¼ ê°ì†Œ
 
 	return x;
 }
@@ -56,13 +56,13 @@ void Queue::enqueue(int item) {
 	}
 	cout << "Inserting " << item << endl;
 
-	rear = (rear + 1) % capacity;
+	rear = (rear + 1) % capacity; //capacityë¡œ ë‚˜ë¨¸ì§€ë¥¼ êµ¬í•˜ëŠ” ê±´ ìš©ëŸ‰ì„ ë„˜ì–´ì„œëŠ” ì›í˜• êµ¬ì¡°ë¼ê³  ìƒê°í•˜ê³  íê°€ êµ¬ì„±ë ë•Œê¹Œì§€ ê°ì•ˆ
 	arr[rear] = item;
 	count++;
 }
 int Queue::peek() {
 	if (isEmpty()) {
-		cout << "Å¥¿¡ °ªÀÌ ¾ø½À´Ï´Ù." << endl;
+		cout << "íì— ê°’ì´ ì—†ìŠµë‹ˆë‹¤." << endl;
 		exit(EXIT_FAILURE);
 	}
 	return arr[front];
