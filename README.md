@@ -9,7 +9,7 @@
 |1|[Array]
 |2|[Linked List]
 |3|[Stack]|BOJ_10828|
-|4|[Queue]
+|4|[Queue]|BOJ_18258|
 
 ---
 ## 1주차 Array
@@ -35,7 +35,7 @@ array를 이용해서 stack을 구현한 코드이다.
 ### [Queue 구현.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/array%EB%A1%9C%20%EB%A7%8C%EB%93%9C%EB%8A%94%20queue.cpp)
 원형 큐의 성질을 띄는 큐를 클래스를 이용하여 구현하였다.
 ### 문제: [18258 큐2 (실버4)](https://www.acmicpc.net/problem/18258)
-### [BOJ 18258-큐2 코드.cpp]()
+### [BOJ 18258-큐2 코드.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/BOJ%2018258-queue.cpp)
 
 
 
