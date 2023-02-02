@@ -2,7 +2,7 @@
 using namespace std;
 
 class Node {
-	friend class DLL; //DLLÀÌ NodeÀÇ private ¸â¹öº¯¼ö Á¢±Ù °¡´É 
+	friend class DLL; //DLLì´ Nodeì˜ private ë©¤ë²„ë³€ìˆ˜ ì ‘ê·¼ ê°€ëŠ¥ 
 private:
 	int data;
 	Node* pNext;
@@ -28,7 +28,7 @@ public:
 	int size();
 };
 
-Node::Node() { //¹üÀ§ÁöÁ¤ ¿¬»êÀÚ
+Node::Node() { //ë²”ìœ„ì§€ì • ì—°ì‚°ì
 	this->pPrev = NULL;
 	this->pNext = NULL;
 }
@@ -44,15 +44,15 @@ DLL::DLL() {
 	pHead = new Node();
 	pTail = new Node();
 	pCursor = new Node();
-	pHead->pNext = pTail;//¿ø·¡´Â privateÀ¸·Î ¼±¾ğµÈ °Í Å¬·¡½º ¿ÜºÎ¿¡¼­ Á¢±Ù ºÒ°¡
+	pHead->pNext = pTail;//ì›ë˜ëŠ” privateìœ¼ë¡œ ì„ ì–¸ëœ ê²ƒ í´ë˜ìŠ¤ ì™¸ë¶€ì—ì„œ ì ‘ê·¼ ë¶ˆê°€
 	pTail->pPrev = pHead;
 }
 
 DLL::~DLL(){}
 
-void DLL::insertion(int data) {
+void DLL::insertion(int data) { //data ê°’ì„ í—¤ë“œ ë°”ë¡œ ê·¸ë‹¤ìŒìœ¼ë¡œ ë„£ì–´ì¤˜ì•¼í•œë‹¤.
 	Node* temp = new Node(data);
-	pCursor = pHead->pNext; //Ä¿¼­°¡ »ğÀÔµÉ ³ëµåÀÇ ´ÙÀ½ ³ëµå
+	pCursor = pHead->pNext; //ì»¤ì„œê°€ í—¤ë“œì˜ ë‹¤ìŒ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¨ë‹¤ tempë¥¼ í—¤ë“œì™€ ì»¤ì„œ ì‚¬ì´ì˜ ì‚½ì…ì‹œì¼œì¤€ë‹¤ 
 	pHead->pNext = temp;
 	temp->pNext = pCursor;
 	pCursor->pPrev = temp;
@@ -62,11 +62,11 @@ void DLL::insertion(int data) {
 void DLL::deletion(int data) {
 	if (pHead->pNext == pTail) { cout << "No node exists." << endl; }
 	else {
-		pCursor = pHead->pNext;//Ä¿¼­´Â Çìµå ¹Ù·Î ´ÙÀ½ ³ëµå 
+		pCursor = pHead->pNext;//ì»¤ì„œëŠ” í—¤ë“œ ë°”ë¡œ ë‹¤ìŒ ë…¸ë“œ 
 		while (pCursor != pTail) {
 			if (pCursor->data == data) {
-				pCursor->pPrev->pNext = pCursor->pNext;//Ä¿¼­°¡ °¡¸®Å°´Â Àü ³ëµå·Î °¡¼­ Àü ³ëµåÀÇ pNext¸¦ Ä¿¼­°¡ °¡¸®Å°´Â ´ÙÀ½ ³ëµåÀÇ ÇÒ´ç
-				pCursor->pNext->pPrev = pCursor->pPrev;//Ä¿¼­°¡ °¡¸®Å°´Â ´ÙÀ½ ³ëµå·Î °¡¼­ ´ÙÀ½ ³ëµåÀÇ pPrev¸¦ Ä¿¼­°¡ °¡¸®Å°´Â Àü ³ëµå·Î ÇÒ´ç
+				pCursor->pPrev->pNext = pCursor->pNext;//ì»¤ì„œê°€ ê°€ë¦¬í‚¤ëŠ” ì „ ë…¸ë“œë¡œ ê°€ì„œ ì „ ë…¸ë“œì˜ pNextë¥¼ ì»¤ì„œê°€ ê°€ë¦¬í‚¤ëŠ” ë‹¤ìŒ ë…¸ë“œì˜ í• ë‹¹
+				pCursor->pNext->pPrev = pCursor->pPrev;//ì»¤ì„œê°€ ê°€ë¦¬í‚¤ëŠ” ë‹¤ìŒ ë…¸ë“œë¡œ ê°€ì„œ ë‹¤ìŒ ë…¸ë“œì˜ pPrevë¥¼ ì»¤ì„œê°€ ê°€ë¦¬í‚¤ëŠ” ì „ ë…¸ë“œë¡œ í• ë‹¹
 				delete pCursor; 
 				return ;
 			}
@@ -116,10 +116,10 @@ int main() {
 	DLL dll;
 	dll.insertion(1);
 	dll.insertion(2);
-	dll.insertion(3); //3 2 1 ½ÄÀ¸·Î ¸ÕÀú µé¾î°£°Ô Á© µÚ·Î°£´Ù.
+	dll.insertion(3); //3 2 1 ì‹ìœ¼ë¡œ ë¨¼ì € ë“¤ì–´ê°„ê²Œ ì ¤ ë’¤ë¡œê°„ë‹¤.
 	dll.traversal();
 	dll.reverseTraversal();
 	dll.deletion(3);
 	dll.traversal();
-	cout << "size: " << dll.size() << endl; //head¶û tailÀº »çÀÌÁî¿¡ Æ÷ÇÔµÇÁö ¾Ê´Â´Ù
+	cout << "size: " << dll.size() << endl; //headë‘ tailì€ ì‚¬ì´ì¦ˆì— í¬í•¨ë˜ì§€ ì•ŠëŠ”ë‹¤
 }
