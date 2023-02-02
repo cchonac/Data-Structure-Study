@@ -36,6 +36,8 @@ array를 이용해서 stack을 구현한 코드이다.
 원형 큐의 성질을 띄는 큐를 클래스를 이용하여 구현하였다.
 ### 문제: [18258 큐2 (실버4)](https://www.acmicpc.net/problem/18258)
 ### [BOJ 18258-큐2 코드.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/BOJ%2018258-queue.cpp)
+endl 대신 '\n'을 사용하면 실행속도를 줄일수있다.endl은 개행문자 출력과 함께 출력 버퍼를 비우는 역할까지 같이 하기 때문에 딜레이가 발생합니다.
+
 
 
 
