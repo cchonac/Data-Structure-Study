@@ -81,7 +81,7 @@ void DLL::traversal() {
 	if (pHead->pNext == pTail) { cout << "No node exists." << endl; }
 	else {
 		pCursor = pHead->pNext;
-		while (pCursor != pTail) {
+		while (pCursor != pTail) { //while문은 조건안이 참이면 실행된다. 
 			cout << pCursor->data << " ";
 			pCursor = pCursor->pNext;
 		}
