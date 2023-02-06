@@ -32,7 +32,7 @@ array를 이용해서 stack을 구현한 코드이다.
 ### 문제: [10828 스택 (실버4)](https://www.acmicpc.net/problem/10828)
 ### [BOJ 10828-스택 코드.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/BOJ%2010828%EB%B2%88-%EC%8A%A4%ED%83%9D.cpp)
 
-<br/><br/>
+<br/>
 ### 문제: [1935 후위표기식2 (실버3)](https://www.acmicpc.net/problem/1935)
 ### [BOJ 1935-후위표기식2 코드.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/BOJ%201935%20%ED%9B%84%EC%9C%84%ED%91%9C%EA%B8%B0%EC%8B%9D.cpp)
 후위표기식이란 ABC+* 처럼 연산자가 나중에 표시되는 방법이다. <br/><br/>
