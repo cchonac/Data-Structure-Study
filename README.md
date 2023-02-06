@@ -27,13 +27,13 @@ array를 class를 이용하여 구현하였다.
 
 <br/><br/>
 ## 3주차 Stack
-### [Stack 구현.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/array%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20stack%20%EA%B5%AC%ED%98%84.cpp)
+### [Stack 구현.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/3.Stack/array%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20stack%20%EA%B5%AC%ED%98%84.cpp)
 array를 이용해서 stack을 구현한 코드이다.
 ### 문제: [10828 스택 (실버4)](https://www.acmicpc.net/problem/10828)
-### [BOJ 10828-스택 코드.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/BOJ%2010828%EB%B2%88-%EC%8A%A4%ED%83%9D.cpp)
+### [BOJ 10828-스택 코드.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/3.Stack/BOJ%2010828%EB%B2%88-%EC%8A%A4%ED%83%9D.cpp)
 <br/><br/>
 ### 문제: [1935 후위표기식2 (실버3)](https://www.acmicpc.net/problem/1935)
-### [BOJ 1935-후위표기식2 코드.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/BOJ%201935%20%ED%9B%84%EC%9C%84%ED%91%9C%EA%B8%B0%EC%8B%9D.cpp)
+### [BOJ 1935-후위표기식2 코드.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/3.Stack/BOJ%201935%20%ED%9B%84%EC%9C%84%ED%91%9C%EA%B8%B0%EC%8B%9D.cpp)
 후위표기식이란 ABC+* 처럼 연산자가 나중에 표시되는 방법이다. <br/><br/>
 컴파일러가 사용하는 방식으로 스택을 사용하는 예로 빈번하게 나온다. <br/><br/>
 #### 사용법: 
@@ -44,10 +44,10 @@ array를 이용해서 stack을 구현한 코드이다.
 
 <br/><br/>
 ## 4주차 Queue
-### [Queue 구현.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/array%EB%A1%9C%20%EB%A7%8C%EB%93%9C%EB%8A%94%20queue.cpp)
+### [Queue 구현.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/4.Queue/Queue.cpp)
 원형 큐의 성질을 띄는 큐를 클래스를 이용하여 구현하였다.
 ### 문제: [18258 큐2 (실버4)](https://www.acmicpc.net/problem/18258)
-### [BOJ 18258-큐2 코드.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/BOJ%2018258-queue.cpp)
+### [BOJ 18258-큐2 코드.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/4.Queue/BOJ%2018258-queue.cpp)
 endl 대신 '\n'을 사용하면 실행속도를 줄일수있습니다. endl은 개행문자 출력과 함께 출력 버퍼를 비우는 역할까지 같이 하기 때문에 딜레이가 발생합니다.
 
 이 문제에서는 제한시간때문에 실행속도를 높여야합니다. 밑 c++로 알고리즘을 풀때 실행속도를 높일 수 있는 구문입니다.
