@@ -8,7 +8,7 @@
 |:---:|:---:|:---:|
 |1|[Array]
 |2|[Linked List]
-|3|[Stack]|BOJ_10828||BOJ_1935|
+|3|[Stack]|BOJ_10828,BOJ_1935|
 |4|[Queue]|BOJ_18258|
 |5|[Vector]
 
