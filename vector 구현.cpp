@@ -6,9 +6,9 @@ private:
 	int* v_arr;
 	int v_capacity;
 	int v_size;
-	int v_fidx, v_lidx; //fidx:¹è¿­ÀÇ Ã¹¹øÂ° ¿ø¼Ò, lidx:¹è¿­ÀÇ ¸¶Áö¸· ¿ø¼Ò
+	int v_fidx, v_lidx; //fidx:ë°°ì—´ì˜ ì²«ë²ˆì§¸ ì›ì†Œ, lidx:ë°°ì—´ì˜ ë§ˆì§€ë§‰ ì›ì†Œ
 
-public: //º¤ÅÍÀÇ Ã¹ ¿ë·®Àº 2ÀÌ´Ù.
+public: //ë²¡í„°ì˜ ì²« ìš©ëŸ‰ì€ 2ì´ë‹¤.
 	Vector() :v_capacity(2), v_size(0), v_fidx(0), v_lidx(0) {
 		v_arr = new int[2];
 	}
@@ -20,9 +20,9 @@ public: //º¤ÅÍÀÇ Ã¹ ¿ë·®Àº 2ÀÌ´Ù.
 		else { return 0; } //false
 	}
 	int at(int x) {
-		if (x >= v_size || empty()) { return -1; } //x°¡ v_sizeº¸´Ù Å©°Å³ª °°´Ù¸é ±× ÀÎµ¦½ºx¿¡ ¾ÆÁ÷ °ªÀÌ¾ø´Ù´Â °ÍÀ» ¾Ë ¼ö ÀÖ´Ù. 
-		else return v_arr[(v_fidx + x) % v_capacity]; //¿øÇü¹è¿­À» ½á¼­ ¹è¿­ÀÇ È¿¿ë¼ºÀ» ³ô¿´´Ù.
-	} //¿øÇü Å¥¸¦ ¾²´Â ÀÌÀ¯: front,rear¿¡¼­ Å¥ÀÇ µ¥ÀÌÅÍ¸¦ ÇÏ³ª¾¿ dequeue ÇØÁÖ¸é frontÀÇ °ªÀÌ Áõ°¡ÇÑ´Ù. ÀÌ¶§ Å¥ÀÇ °¡¿ë¹üÀ§°¡ ÁÙ¾îµé¾î ÀÌ ´ÜÁ¡À» º¸¿ÏÇÏ±â À§ÇÑ °ÍÀÓ.
+		if (x >= v_size || empty()) { return -1; } //xê°€ v_sizeë³´ë‹¤ í¬ê±°ë‚˜ ê°™ë‹¤ë©´ ê·¸ ì¸ë±ìŠ¤xì— ì•„ì§ ê°’ì´ì—†ë‹¤ëŠ” ê²ƒì„ ì•Œ ìˆ˜ ìˆë‹¤. 
+		else return v_arr[(v_fidx + x) % v_capacity]; //ì›í˜•ë°°ì—´ì„ ì¨ì„œ ë°°ì—´ì˜ íš¨ìš©ì„±ì„ ë†’ì˜€ë‹¤.
+	} //ì›í˜• íë¥¼ ì“°ëŠ” ì´ìœ : front,rearì—ì„œ íì˜ ë°ì´í„°ë¥¼ í•˜ë‚˜ì”© dequeue í•´ì£¼ë©´ frontì˜ ê°’ì´ ì¦ê°€í•œë‹¤. ì´ë•Œ íì˜ ê°€ìš©ë²”ìœ„ê°€ ì¤„ì–´ë“¤ì–´ ì´ ë‹¨ì ì„ ë³´ì™„í•˜ê¸° ìœ„í•œ ê²ƒì„.
 	void set(int idx, int x) {
 		if (x >= v_size || empty()) { cout << -1; }
 		else { v_arr[(v_fidx + idx) % v_capacity] = x; }
@@ -37,10 +37,10 @@ public: //º¤ÅÍÀÇ Ã¹ ¿ë·®Àº 2ÀÌ´Ù.
 		v_fidx = 0;
 		v_lidx = v_size;
 		delete[] v_arr;
-		v_arr = newArr; //´Ù½Ã ¼±¾ğ ¾ÈÇØÁàµµ µÇ³×??
+		v_arr = newArr; //ë‹¤ì‹œ ì„ ì–¸ ì•ˆí•´ì¤˜ë„ ë˜ë„¤??
 	}
 	void doublingDown() {
-		int* newArr = new int[v_capacity / 2]; //2·Î ÁÙ¿©µµ ½ÇÁ¦»çÀÌÁî°¡ °°°Å³ª ÀÌº¸´Ù ÀÛÀ»¶§ 
+		int* newArr = new int[v_capacity / 2]; //2ë¡œ ì¤„ì—¬ë„ ì‹¤ì œì‚¬ì´ì¦ˆê°€ ê°™ê±°ë‚˜ ì´ë³´ë‹¤ ì‘ì„ë•Œ 
 		for (int i = 0; i < v_size; i++) {
 			newArr[i] = v_arr[(v_fidx + i) % v_capacity];
 		}
@@ -53,15 +53,15 @@ public: //º¤ÅÍÀÇ Ã¹ ¿ë·®Àº 2ÀÌ´Ù.
 	}
 	void insert(int idx, int x) {
 		if (v_size == v_capacity) {
-			this->doublingUp(); //this¸¦ ¾È½áÁÖ°Ô µÈ´Ù¸é? 
+			this->doublingUp();
 		}
-		for (int i = v_size; i > idx; i--) {//µÚ¿¡¼­ºÎÅÍ ¾ÕÀ¸·Î 
+		for (int i = v_size; i > idx; i--) {//ë’¤ì—ì„œë¶€í„° ì•ìœ¼ë¡œ 
 			v_arr[(v_fidx + i) % v_capacity] = v_arr[(v_fidx + i - 1) % v_capacity];
-			//ÇÑÄ­¾¿ µÚ·Î ¶¯°ÜÁØ´Ù »ğÀÔÇÒ ¿ä¼Ò°¡ µé¾î°¡±â À§ÇØ 
+			//í•œì¹¸ì”© ë’¤ë¡œ ë•¡ê²¨ì¤€ë‹¤ ì‚½ì…í•  ìš”ì†Œê°€ ë“¤ì–´ê°€ê¸° ìœ„í•´ 
 		}
 		v_arr[(v_fidx + idx) % v_capacity] = x;
-		v_size++; //»çÀÌÁî +1
-		v_lidx = (v_lidx + 1) % v_capacity; //¸Ç ¸¶Áö¸· ¿ä¼Ò °ª ÀÎµ¦½º ÀÌµ¿
+		v_size++; //ì‚¬ì´ì¦ˆ +1
+		v_lidx = (v_lidx + 1) % v_capacity; //ë§¨ ë§ˆì§€ë§‰ ìš”ì†Œ ê°’ ì¸ë±ìŠ¤ ì´ë™
 	}
 	void remove(int idx) {
 		if (empty() || idx >= v_size) {
@@ -70,9 +70,9 @@ public: //º¤ÅÍÀÇ Ã¹ ¿ë·®Àº 2ÀÌ´Ù.
 		else {
 			cout << v_arr[(v_fidx + idx) % v_capacity] << '\n';
 
-			for (int i = idx; i < v_size - 1; i++) { //µÚ¿¡¼­ ¾ÕÀ¸·Î ¶¯±â´Ï±î v_size-1¸¸Å­ 
+			for (int i = idx; i < v_size - 1; i++) { //ë’¤ì—ì„œ ì•ìœ¼ë¡œ ë•¡ê¸°ë‹ˆê¹Œ v_size-1ë§Œí¼ 
 				v_arr[(v_fidx + idx) % v_capacity] = v_arr[(v_fidx + idx + 1) % v_capacity];
-			}//¾ÕÀ¸·Î ¶¯°ÜÁØ´Ù ¿ä¼Ò ÇÏ³ª°¡ »èÁ¦µÇ¾úÀ¸´Ï 
+			}//ì•ìœ¼ë¡œ ë•¡ê²¨ì¤€ë‹¤ ìš”ì†Œ í•˜ë‚˜ê°€ ì‚­ì œë˜ì—ˆìœ¼ë‹ˆ 
 			v_size--;
 			if (v_lidx == 0) v_lidx = v_capacity;
 			v_lidx = (v_lidx - 1) % v_capacity;
@@ -88,7 +88,7 @@ public: //º¤ÅÍÀÇ Ã¹ ¿ë·®Àº 2ÀÌ´Ù.
 		if (v_size == v_capacity) {
 			this->doublingUp();
 		}
-		v_arr[(v_lidx++) % v_capacity] = x; //v_lidx+1 ÀÏ¶© ¾ÈµÈ´Ù 
+		v_arr[(v_lidx++) % v_capacity] = x; //v_lidx+1 ì¼ë• ì•ˆëœë‹¤ , lidx ìì²´ê°€ ì¦ê°€ê°€ ì•ˆë˜ëŠ” ë¬¸ì œê°€ ë°œìƒ
 		v_size++;
 
 	}
