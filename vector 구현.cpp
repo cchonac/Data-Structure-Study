@@ -37,7 +37,7 @@ public: //벡터의 첫 용량은 2이다.
 		v_fidx = 0;
 		v_lidx = v_size;
 		delete[] v_arr;
-		v_arr = newArr; //다시 선언 안해줘도 되네??
+		v_arr = newArr; //다시 선언 안해줘도 되네?? **delete가 v_arr와의 연결을 해제해주는 거지 v_arr가 사라지는 건 아니니까
 	}
 	void doublingDown() {
 		int* newArr = new int[v_capacity / 2]; //2로 줄여도 실제사이즈가 같거나 이보다 작을때 
