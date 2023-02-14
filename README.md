@@ -11,7 +11,7 @@
 |3|[Stack]|BOJ_10828,BOJ_1935,BOJ_1918|
 |4|[Queue]|BOJ_18258|
 |5|[Vector]
-|6|[Tree]|
+|6|[Tree]|BOJ_1991|
 
 ---
 ## 1주차 Array
