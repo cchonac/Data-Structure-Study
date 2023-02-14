@@ -95,3 +95,6 @@ endl 대신 '\n'을 사용하면 실행속도를 줄일수있습니다. endl은 
 #### -level: 트리의 특정 깊이를 가지는 노드의 집합
 #### -degree(노드의 차수): 자식노드의 개수
 #### -degree of tree(트리의 차수): 트리의 최대 차수
+![image](https://user-images.githubusercontent.com/77561827/218643739-972f9761-7a0d-4a22-9189-6aea8102cd65.png)
+
+
