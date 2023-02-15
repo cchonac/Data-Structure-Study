@@ -141,5 +141,6 @@ endl 대신 '\n'을 사용하면 실행속도를 줄일수있습니다. endl은 
 ### [BOJ_13116 30번.cpp](https://github.com/cchonac/Data-Structure-Study/blob/main/BOJ%2013116%EB%B2%88%20Tree.cpp)
 break 문은 if문을 나가게 하는게 아니라 for,while 같은 반복문을 나가게 한다. <br/>
 만약 이중 for문 처럼 여러개라면, 가장 안쪽의 반복문을 나가게 된다. 
-
+#### 삼항연산자
+(조건?값1:값2) 조건이 true면 값1 실행, false면 값 2 실행
 
