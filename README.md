@@ -150,4 +150,7 @@ break 문은 if문을 나가게 하는게 아니라 for,while 같은 반복문�
 (조건?값1:값2) 조건이 true면 값1 실행, false면 값2 실행
 <br/><br/>
 ## 7주차 Priority Queue,Heap
+### 우선순위 큐란? 
+#### 우선순위 큐도 큐와 동일하게 push,pop,top이라는 연산이 있다.
+#### C++ STL<queue> 헤더에서 제공하는 컨테이너 
 
