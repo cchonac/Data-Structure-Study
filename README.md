@@ -6,11 +6,11 @@
 
 |Number|DataStructure|Assginment|
 |:---:|:---:|:---:|
-|1|[Array]
-|2|[Linked List]
-|3|[Stack]|BOJ_10828,BOJ_1935,BOJ_1918|
-|4|[Queue]|BOJ_18258|
-|5|[Vector]
+|1|[Array]|Array 구현|
+|2|[Linked List]|SLL구현,DLL구현|
+|3|[Stack]|Stack 구현,BOJ_10828,BOJ_1935,BOJ_1918|
+|4|[Queue]|Queue 구현,BOJ_18258|
+|5|[Vector]|Vector 구현|
 |6|[Tree]|BOJ_1991,BOJ_13116|
 |7|[Priority Queue,Heap]|
 
