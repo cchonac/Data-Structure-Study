@@ -9,10 +9,10 @@ int main() {
 		cin >> arr[i];
 	}
 	
-	for (int i = 0; i < N - 1; i++) { //i°¡ N-1¹ø ¹Ýº¹
+	for (int i = 0; i < N - 1; i++) { //iï¿½ï¿½ N-1ï¿½ï¿½ ï¿½Ýºï¿½
 		int minIdx = i;
-		for (int j = i + 1; j < N; j++) { //j°¡ N-1¹ø ¹Ýº¹
-			minIdx = (arr[minIdx] > arr[j] ? j : minIdx); //»ïÇ×¿¬»êÀÚ
+		for (int j = i + 1; j < N; j++) { //jï¿½ï¿½ N-1ï¿½ï¿½ ï¿½Ýºï¿½
+			minIdx = (arr[minIdx] > arr[j] ? j : minIdx); //ï¿½ï¿½ï¿½×¿ï¿½ï¿½ï¿½ï¿½ï¿½
 		}
 		if (minIdx == i)continue;
 
@@ -39,11 +39,11 @@ int main() {
 	for (int i = 1; i < N; i++) {
 		int key = arr[i];
 		for (int j = i - 1; j >= 0; j--) {
-			if (key < arr[j]) //keyº¸´Ù ¿ÞÂÊ¿¡ ÀÖ´Â °ªÀÌ ´õ Å¬°æ¿ì °ª ±³È¯
+			if (key < arr[j]) //keyï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê¿ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½È¯
 			{	arr[j + 1] = arr[j];
 				arr[j] = key;
 			}
-			else break; //keyÀÇ °ªÀÌ Àü °ªº¸´Ù ´õ Å©¸é ¹Ù·Î for¹® ³ª¿È
+			else break; //keyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Å©ï¿½ï¿½ ï¿½Ù·ï¿½ forï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		}
 	}
 	for (int k = 0; k < N; k++) {
