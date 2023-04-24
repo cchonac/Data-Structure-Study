@@ -12,7 +12,7 @@
 |4|[Queue]|Queue 구현,BOJ_18258|
 |5|[Vector]|Vector 구현|
 |6|[Tree]|BOJ_1991,BOJ_13116|
-|7|[Priority Queue,Heap]|BOJ_2750|
+|7|[Priority Queue,Heap]|BOJ_2750,BOJ_1927|
 
 
 
