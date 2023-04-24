@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
-// ÀÚ¿¬¼ö¸é x »ğÀÔ, 0ÀÌ¸é Á¦ÀÏ ÀÛÀº°ª Ãâ·ÂÈÄ Á¦°Å, ºñ¾îÀÖ´Âµ¥ 0µé¾î¿À¸é 0Ãâ·Â
+//BOJ_1927 ìµœì†Œí™
+// ìì—°ìˆ˜ë©´ x ì‚½ì…, 0ì´ë©´ ì œì¼ ì‘ì€ê°’ ì¶œë ¥í›„ ì œê±°, ë¹„ì–´ìˆëŠ”ë° 0ë“¤ì–´ì˜¤ë©´ 0ì¶œë ¥
 
 void intSwap(int& a, int& b) {
 	int tmp = 0;
@@ -42,10 +43,10 @@ void MinHeap::upHeap() {
 }
 void MinHeap::downHeap() {
 	int curidx = 1;
-	while (curidx * 2 <= arr_size) { //ÈüÀ» ´Ù µ¹¶§±îÁö
+	while (curidx * 2 <= arr_size) { //í™ì„ ë‹¤ ëŒë•Œê¹Œì§€
 		int min = arr[curidx];
 		int taridx = curidx;
-		if (min > arr[curidx * 2]) { //ÀÚ½Ä³ëµåÀÇ °ªÀÌ ´õ ÀÛÀ¸¸é
+		if (min > arr[curidx * 2]) { //ìì‹ë…¸ë“œì˜ ê°’ì´ ë” ì‘ìœ¼ë©´
 			min = arr[curidx * 2];
 			taridx = curidx * 2;
 		}
@@ -53,9 +54,9 @@ void MinHeap::downHeap() {
 			min = arr[curidx * 2 + 1];
 			taridx = curidx * 2 + 1;
 		}
-		if (taridx == curidx) break;//¿ŞÂÊ ÀÚ½Ä ¿À¸¥ÂÊ ÀÚ½Ä ´Ù ºñ±³Çß´Âµ¥ minÀÌ ¾È¹Ù²î¸é break
+		if (taridx == curidx) break;//ì™¼ìª½ ìì‹ ì˜¤ë¥¸ìª½ ìì‹ ë‹¤ ë¹„êµí–ˆëŠ”ë° minì´ ì•ˆë°”ë€Œë©´ break
 		else {
-			intSwap(arr[curidx], arr[taridx]); //½ÇÁ¦ Èü¿¡¼­ µÎ °ªÀÇ ±³È¯ÀÌ ÀÏ¾î³ª´Â ¼ø°£
+			intSwap(arr[curidx], arr[taridx]); //ì‹¤ì œ í™ì—ì„œ ë‘ ê°’ì˜ êµí™˜ì´ ì¼ì–´ë‚˜ëŠ” ìˆœê°„
 			curidx = taridx;
 		}
 	}
